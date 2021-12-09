@@ -98,10 +98,10 @@ public void clickonSearchButton(String CityAndState,String HomePageUrl, String S
     searchButton.click();
     //searchBox.sendKeys(Keys.ENTER);
     CommonUtil.shortWait();
-      ;
+      
   
-	    String expectedForclosureText=pageHeading.getText().replaceAll("[0-9]","").replaceAll("[^a-zA-Z0-9]","").trim();
-	    System.out.println(expectedForclosureText);
+	   // String expectedForclosureText=pageHeading.getText().replaceAll("[0-9]","").replaceAll("[^a-zA-Z0-9]","").trim();
+	   // System.out.println(expectedForclosureText);
 	   // Assert.assertEquals("ForeclosuresforSale", expectedForclosureText);
 	 
 			}

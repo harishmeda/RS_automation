@@ -18,6 +18,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import com.nic.rs.qa.util.Constants;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 
 public class BasePage {
@@ -32,10 +34,11 @@ public class BasePage {
 		String browserName = prop.getProperty("browser");
 
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\DriverFiles\\chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\DriverFiles\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-single-click-autofill");
-			options.addArguments("--headless");
+			//options.addArguments("--headless");
 			tldriver.set(new ChromeDriver(options));
 		} else if (browserName.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "");
